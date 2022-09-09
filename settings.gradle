@@ -15,4 +15,5 @@ dependencyResolutionManagement {
     }
 }
 rootProject.name = "CDP"
+include ':CDP-Library'
 include ':app'
