@@ -14,10 +14,10 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
-import androidx.compose.ui.unit.sp
 import com.cdp.demo.ui.theme.MyApplicationTheme
 import com.cdp.demo.ui.theme.Purple500
 import com.mbp.cdp.CDP
+import com.mbp.csp.CSP
 
 
 class MainActivity : ComponentActivity() {
@@ -30,7 +30,7 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colors.background
                 ) {
-                    Greeting("CDP")
+                    Greeting("CDP & CSP")
                 }
             }
         }
@@ -54,14 +54,14 @@ fun Greeting(name: String) {
                 .fillMaxWidth()
                 .padding(CDP.dimens._2cdp)
         )
-        Text(text = "Hello $name!", fontSize = 10.sp, color = Purple500)
-
+        Text(text = "Hello $name!", fontSize = CSP.dimens._20csp, color = Purple500)
+        Spacer(modifier = Modifier.height(CDP.dimens._15cdp))
         Button(
             onClick = {}, shape = RoundedCornerShape(CDP.dimens._20cdp), modifier = Modifier
                 .height(CDP.dimens._40cdp)
-                .width(CDP.dimens._150cdp)
+
         ) {
-            Text(text = "Round corner shape")
+            Text(text = "Round corner shape", fontSize = CSP.dimens._15csp)
         }
         Spacer(modifier = Modifier.height(CDP.dimens._15cdp))
         Button(
@@ -69,11 +69,12 @@ fun Greeting(name: String) {
                 //your onclick code
             },
             border = BorderStroke(CDP.dimens._1cdp, Color.Red),
-            colors = ButtonDefaults.outlinedButtonColors(contentColor = Color.Red), modifier = Modifier
+            colors = ButtonDefaults.outlinedButtonColors(contentColor = Color.Red),
+            modifier = Modifier
                 .height(CDP.dimens._50cdp)
-                .width(CDP.dimens._100cdp)
+
         ) {
-            Text(text = "Button with border", color = Color.DarkGray)
+            Text(text = "Button with border", color = Color.DarkGray, fontSize = CSP.dimens._8csp)
         }
     }
 }
@@ -83,6 +84,6 @@ fun Greeting(name: String) {
 @Composable
 fun DefaultPreview() {
     MyApplicationTheme {
-        Greeting("CDP")
+        Greeting("CDP & CSP")
     }
 }

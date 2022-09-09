@@ -7,17 +7,19 @@
 # cdp - A Composable Scalable Size Unit
 An android lib that provides a new size unit - cdp (compose dp). This size unit scales with the screen size for Jetpack Compose Structure. It can help Android developers with supporting multiple screens for Compose structure.
 
+for text views please refer to [csp](https://github.com/mbpatel6245/csp) which is based on the sp size unit for texts.
+
 # Attention
 Use it carefully! for example, in most cases you still need to design a different layout for tablets.
 
 # Example
 Here is a single layout built using **cdp**:
 
-
+![cdp example](https://github.com/mbpatel6245/cdp/blob/master/cdp_example.png)
 
 And Here is the same layout built using **dp**:
 
-
+![dp example](https://github.com/mbpatel6245/cdp/blob/master/dp_example.png)
 
 You can see that cdp scales with the screen size and the dp stays with the same size on all screen sizes.
 
