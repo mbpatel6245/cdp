@@ -45,7 +45,7 @@ afterEvaluate{
             release(MavenPublication) {
                 from components.release
 
-                artifactId = 'cdp-android'
+                artifactId = 'cdp'
                 groupId = 'com.mbp.cdp'
                 version = '1.0.0'
             }
